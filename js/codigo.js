@@ -110,7 +110,12 @@ function sonLaMismaLlave(){
 	}
 	
 }
-
+function cambiarIconoDelMenu(){
+	$boton_menu.classList.toggle('icon-close')
+}
+function desplegarMenuDeOpciones(){
+	$menu.classList.toggle('active')
+}
 
 const partida = {
 	llave: 0,
@@ -128,6 +133,9 @@ const longitud = tarjetas.length
 
 const $minuto = document.getElementById('minuto')
 const $segundo = document.getElementById('segundo')
+
+const $boton_menu = document.getElementById('boton-menu')
+const $menu = document.getElementById('menu')
 
 let medidorDelTiempo
 
@@ -150,6 +158,11 @@ const iconos = [
 	{nombre: 'icon-firefox',	numero: 11},
 	{nombre: 'icon-IE', 		numero: 12},
 ]
+
+$boton_menu.addEventListener('click', function(){
+	cambiarIconoDelMenu()
+	desplegarMenuDeOpciones()
+})
 
 window.addEventListener('load', function(){
 	generarTarjetasAleatorias()
