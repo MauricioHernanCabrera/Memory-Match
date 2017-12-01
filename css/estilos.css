@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?iho7hm');
+  src:  url('../fonts/icomoon.eot?iho7hm#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?iho7hm') format('truetype'),
+    url('../fonts/icomoon.woff?iho7hm') format('woff'),
+    url('../fonts/icomoon.svg?iho7hm#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-stopwatch:before {
+  content: "\e952";
+}
+.icon-google:before {
+  content: "\ea88";
+}
+.icon-facebook:before {
+  content: "\ea91";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-tux:before {
+  content: "\eabd";
+}
+.icon-appleinc:before {
+  content: "\eabe";
+}
+.icon-android:before {
+  content: "\eac0";
+}
+.icon-windows:before {
+  content: "\eac1";
+}
+.icon-chrome:before {
+  content: "\ead9";
+}
+.icon-firefox:before {
+  content: "\eada";
+}
+.icon-IE:before {
+  content: "\eadb";
+}
+.icon-html-five:before {
+  content: "\eae4";
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+	font-family: 'Open Sans', sans-serif;
+
+	animation-name: aparecer;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+}
+.contenedor-juego{
+	max-width: 600px;
+	
+}
+.contenedor-juego .juego{
+	display: flex;
+	flex-wrap: wrap;
+}
+.contenedor-juego .juego .tarjeta{
+	height: 80px;
+	width: 80px;
+	margin: 5px;
+	list-style: none;
+	cursor: pointer;
+
+	
+	background: #69140E;
+	border: 4px solid white;
+
+
+	border-radius: 50%;
+	transition: .5s;
+	transform: rotateY(180deg);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contenedor-juego .juego .tarjeta.activo{
+	transform: rotateY(0deg);
+}
+.contenedor-juego .juego .tarjeta .icon{
+	font-size: 25px;
+	color: white;
+	display: none;
+	transition: .5s;
+}
+
+.contenedor-juego .juego .tarjeta .icon.activo{
+	display: inline-block;
+}
+
+@keyframes aparecer{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+.franja{
+	margin-top: 20px;
+	height: 60px;
+	width: 100%;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.franja .tiempo{
+	font-size: 25px;
+	color: white;
+}
